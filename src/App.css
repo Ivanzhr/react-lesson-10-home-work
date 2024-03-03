@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(193, 193, 193);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+    width: 90%;
+    margin:20px auto;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input, select, button {
+    padding: 10px;
+    flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.events {
+    padding: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.event {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(220, 219, 219);
+}
+
+.event:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+.event div {
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Modal */
+.overlay {
+    position: fixed; 
+    top: 0; 
+    right: 0;    
+    bottom: 0;
+    left: 0;   
+    background-color: rgba(97, 97, 97, 0.742); 
+    z-index: 9999;
+}
+
+.overlay .modal {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background-color: rgb(220, 219, 219);
+    position: relative;
+}
+
+.overlay .modal span {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.overlay .modal span:hover {
+    cursor: pointer;
+}
+
+.modal .inform {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 }
